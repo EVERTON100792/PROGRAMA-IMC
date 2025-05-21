@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-brasil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO IMC</title>
+</head>
+<body>
+
+    <h1>Calcule Seu IMC</h1>
+
+    <button onclick="mostrarPrompt()">Vamos calcular</button>
+
+    <p id="resultado"></p>
+
+        <script>
+
+            function mostrarPrompt() {
+            let peso = prompt("Digite seu peso:");
+            let altura = prompt("Digite sua altura (use o ponto)")
+            let alturaao_quadrado = altura * altura
+            let resultado = peso / alturaao_quadrado
+
+            if (peso + altura != null) {
+            document.getElementById("resultado").textContent = "Seu IMC é: " + resultado.toFixed(2);
+            } else {
+            document.getElementById("resultado").textContent = "Prompt cancelado";
+            }
+            }
+ 
+        </script>
+</body>
+</html>
